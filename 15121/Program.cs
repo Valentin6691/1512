@@ -126,12 +126,15 @@ while(num>0)
     newnum = newnum + (num%10).ToString();
     num = num/10;
 }
-for(int i = 0; i<newnum.Length; i++)
+int i = newnum[newnum.Length-1];
+Console.Write("{");
+Console.Write(newnum[newnum.Length-1] + ", ");
+for(i = 1; i<newnum.Length-1; i++)
 {
     Console.Write(newnum[newnum.Length-i-1] + ", ");
 }
-    
-        
+    Console.Write(newnum[newnum.Length-i-1]);
+    Console.Write("}");    
     
 
 
