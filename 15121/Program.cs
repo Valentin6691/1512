@@ -69,3 +69,60 @@
 // Найдите произведения пар чисел в одномерном массиве. Парой
 // считаем первый и последний элемент, второй и предпоследний и
 // т.д. Результат запишите в новый массив.
+
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int[] array = new int[num];
+// int[] array2 = new int[num/2];
+// for(int i = 0; i<array.Length; i++)
+// {
+//     array[i] = new Random().Next(0,12);
+//     Console.Write(array[i] + " ");
+// }
+// Console.WriteLine();
+// for(int i = 0; i<array2.Length; i++)
+// {
+//     if(i == array.Length - i - 1)
+// {  
+// return;
+// }
+//     array2[i] = array[i] * array[array.Length - i - 1];
+//     Console.Write(array2[i] + " ");
+// }
+
+// Задание 4*. Совместная работа
+// [если позволит тайминг]
+// Дано натуральное трёхзначное число. Создайте массив, состоящий из
+// цифр этого числа. Младший разряд числа должен располагаться на 0-
+// м индексе массива, старший – на 2-м.
+// Пример
+// 456 => [6 5 4]
+// 781 => [1 8 7]
+
+Console.WriteLine("Введите трехзначное число");
+int num = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[3];
+if(num<1000 && num>99)
+{
+    array[0] = num%10;
+    array[1] = num/10%10;
+    array[2] = num/100;
+    for(int i = 0; i<array.Length; i++)
+{
+    Console.Write(array[i] + " ");
+}
+}
+else
+{
+Console.WriteLine("Число не подходит");
+}
+
+    
+        
+    
+
+
+
+
+
