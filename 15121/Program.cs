@@ -100,24 +100,36 @@
 // 456 => [6 5 4]
 // 781 => [1 8 7]
 
-Console.WriteLine("Введите трехзначное число");
-int num = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[3];
-if(num<1000 && num>99)
-{
-    array[0] = num%10;
-    array[1] = num/10%10;
-    array[2] = num/100;
-    for(int i = 0; i<array.Length; i++)
-{
-    Console.Write(array[i] + " ");
-}
-}
-else
-{
-Console.WriteLine("Число не подходит");
-}
+// Console.WriteLine("Введите трехзначное число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[3];
+// if(num<1000 && num>99)
+// {
+//     array[0] = num%10;
+//     array[1] = num/10%10;
+//     array[2] = num/100;
+//     for(int i = 0; i<array.Length; i++)
+// {
+//     Console.Write(array[i] + " ");
+// }
+// }
+// else
+// {
+// Console.WriteLine("Число не подходит");
+// }
 
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+string newnum = "";
+while(num>0)
+{
+    newnum = newnum + (num%10).ToString();
+    num = num/10;
+}
+for(int i = 0; i<newnum.Length; i++)
+{
+    Console.Write(newnum[newnum.Length-i-1] + ", ");
+}
     
         
     
